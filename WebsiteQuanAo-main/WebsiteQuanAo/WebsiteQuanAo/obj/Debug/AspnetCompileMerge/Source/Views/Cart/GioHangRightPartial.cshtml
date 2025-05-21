@@ -1,0 +1,69 @@
+﻿
+@using WebsiteQuanAo.Models
+@model List<Cart>
+<head>
+    <style>
+        .cart-content {
+            overflow-y: scroll;
+            height: 300px;
+            width: 350px;
+            padding-right: 20px;
+        }
+
+        ::-webkit-scrollbar {
+            width: .5rem;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 3px grey;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: black;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<h4 style="color:dimgray;">@ViewBag.tbGioHang</h4>
+<div class="cart-content">
+    @foreach (var i in Model)
+    {
+        <div class="cart-box" style="border-bottom: 1px solid #cdc6c6;">
+            <img src="~/Images/@i.sAnhBia" alt="ảnh sản phẩm" class="cart-img">
+            <div class="detail-box">
+
+                <strong>
+                    @i.sTenSP
+                </strong>
+
+                <input type="number" value="@i.iSoLuong" class="cart-quantity">
+                <span class="cart-price"><strong>@Html.FormatValue(@i.dDonGia, "{0:#,##0}")đ</strong></span>
+
+            </div>
+            <!--Remove Cart-->
+
+            <a id="delete_product" style="text-decoration:none;" href="@Url.Action("XoaGioHang","Cart",new {iMaSP = @i.iMaSP, url=Request.Url.ToString()})" role="button">&#10005;</a>
+
+        </div>
+    }
+</div>
+    <div class="footer" style="width:330px;">
+        <div class="total">
+            <div class="">Tổng số phụ:</div>
+            <div class="total-price">@Html.FormatValue(@ViewBag.TongTien, "{0:#,##0}")đ</div>
+        </div>
+        <!--Buy Button-->
+        <div class="total1">
+            <div class="">Yay ! Đơn hàng của bạn được Free ship khi thanh toán qua chuyển khoản hoặc momo </div>
+        </div>
+        <div class="button-buy">
+            <button><a href="@Url.Action("GioHang","Cart")" type="button" class="btn-buy">XEM GIỎ HÀNG</a></button>
+            <button><a href="@Url.Action("DatHang","Cart")" type="button" class="btn-buy1">THANH TOÁN</a></button>
+        </div>
+        <!-- <button type="button" class="btn-buy">Xem Giỏ Hàng</button> -->
+        <!--Cart close-->
+    </div>

@@ -1,0 +1,153 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Noctual Shop</title>
+    <link rel="icon" href="~/Images/logo_title.png" type="image/icon type">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/Content/layounew1.css">
+    @*<script src="~/Content/jsnew.js"></script>*@
+    @RenderSection("Scripts", false/*required*/)
+</head>
+<body>
+    <!-- navbar -->
+    @*@{
+            Html.RenderPartial("_NavPartial");
+        }*@
+    @Html.Action("_NavPartial", "Clothes")
+
+   
+
+    @RenderBody()
+    <!-- Footer -->
+    <footer class="bg-light ">
+        <!-- Section: Social media -->
+        <section class="d-flex  justify-content-lg-between pb-0 pt-5
+   border-bottom border-top">
+
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-2">
+                <div class="row">
+                    <div class="col-md-2 col-lg-2   mx-auto ">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+                    <div class="col-md-3 col-lg-10 mx-auto ">
+                        <h6 class="text-uppercase fw-bold ">
+                            </i>Vận chuyển siêu tốc
+                        </h6>
+                        <p>
+                            Trong ngày tại Thủ Dầu Một
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-2">
+                <div class="row">
+                    <div class="col-md-2 col-lg-2   mx-auto ">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    </div>
+                    <div class="col-md-3 col-lg-10 mx-auto ">
+                        <h6 class="text-uppercase fw-bold ">
+                            Miễn phí đổi trả
+                        </h6>
+                        <p>
+                            Trong vòng 03 ngày sau khi nhận hàng
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-2">
+                <div class="row">
+                    <div class="col-md-2 col-lg-2   mx-auto ">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div class="col-md-3 col-lg-10 mx-auto ">
+                        <h6 class="text-uppercase fw-bold ">
+                            Tư vấn - hộ trợ
+                        </h6>
+                        <p>
+                            9:30 - 21:30 hàng ngày
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-2">
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <h3>nocturnal</h3>
+                        <p>Hộ kinh doanh NocLaBel</p>
+                        <p>Địa chỉ: TDM, Bình Dương</p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <h3>ADDRESS</h3>
+                        <p>Hộ kinh doanh NocLaBel</p>
+                        <p>Thứ hai- chủ nhật: 9:00-21:30</p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <h3>CUSTOMER</h3>
+                        <p>Yêu cầu hỗ trợ</p>
+                        <p>Membership</p>
+                        <p>Hưỡng dẫn thanh toán</p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <img src="~/Images/footer.jpg" alt="" style="width:80%">
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Grid row -->
+
+        </section>
+        <!-- Section: Links  -->
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            NOCTURNAL &#169;	 2023 ALL RIGHTS RESERVED.
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-angles-up"></i></button>
+    <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+        //scroll top: vị trí hiện tại
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        //     navigation-search
+        function on_search() {
+            document.getElementById("navigation_search").style.height = "100%";
+        }
+        function close_search() {
+            document.getElementById("navigation_search").style.height = "0%";
+        }
+
+        function openNav() {
+            document.getElementById("cart").style.right = "0px";
+        }
+        function closeNav() {
+            document.getElementById("cart").style.right = "-370px";
+        }
+    </script>
+</body>
+
+</html>
+

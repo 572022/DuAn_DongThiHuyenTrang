@@ -1,0 +1,53 @@
+﻿
+@using WebMULTI.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<SanPham>
+<head>
+    <style>
+
+        .navbar .fas {
+            margin: 0px 13px 0px 5px;
+        }
+
+        .page-item {
+            padding: 5px 10px;
+            border: 1px solid #d5d4eb;
+            border-radius: 2px;
+        }
+
+            .page-item a {
+                text-decoration: none;
+                color: #7d7388;
+            }
+
+        .pagination {
+            justify-content: center;
+        }
+
+        ul li:last-child {
+            border: 1px solid #d5d4eb;
+        }
+        .MenuTrang{
+            text-align:center;
+        }
+    </style>
+</head>
+<!-- Products Start -->
+<div class="container-fluid pt-5 pb-3">
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Sản Phẩm Mới</span></h2>
+
+    @{
+        Html.RenderPartial("_layoutpd");
+    }
+</div>
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }),
+  new PagedListRenderOptions
+  {
+      //thiết lập class cho thẻ li
+      LiElementClasses = new[] { "page-item" }
+
+      })
+
+    Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount
+</div><!-- Products End -->

@@ -1,0 +1,20 @@
+﻿@model List<WebMULTI.Models.pro_color>
+
+<div class="d-flex mb-4">
+    <strong class="text-dark mr-3">Colors:</strong>
+    <form>
+        @foreach (var i in Model)
+        {
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="@i.namecolor" name="color">
+                <label class="custom-control-label" for="@i.namecolor">@i.namecolor</label>
+            </div>
+            @*<label> @Html.RadioButton("color", @i.namecolor)</label>*@
+           
+        }
+    </form>
+</div>
+
+
+
+

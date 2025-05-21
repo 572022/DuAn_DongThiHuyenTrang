@@ -1,0 +1,11 @@
+﻿@using WebMULTI.Models
+@model  List<WebMULTI.Areas.Admin.Models.ListColor>
+
+@foreach (var i in Model)
+{
+    if (i != null)
+    {
+        @i.Ecolor
+    }
+    <p>Lỗi</p>
+}

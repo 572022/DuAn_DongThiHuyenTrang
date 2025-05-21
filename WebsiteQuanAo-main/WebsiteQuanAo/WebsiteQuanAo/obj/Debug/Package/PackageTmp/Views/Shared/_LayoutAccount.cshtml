@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        @*@Html.Action("_NavPartial", "Account");*@
+        @*@RenderSection("_NavPartial");*@
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="nav">
+                        
+                            <li class="nav-item @(Request.Url.AbsolutePath.Equals(Url.Action("Index", "Home"), StringComparison.OrdinalIgnoreCase) ? "active" : "")">
+                                <a class="nav-link" href="@Url.Action("Index", "Home")">
+                                    <i class="fa fa-dashboard"></i>
+                                    <p>Trang chủ</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Url.AbsolutePath.Equals(Url.Action("Index", "Product"), StringComparison.OrdinalIgnoreCase) ? "active" : "")">
+                                <a class="nav-link" href="@Url.Action("Index", "Product")">
+                                    <i class="nc-icon nc-satisfied"></i>
+                                    <p>Sản phẩm</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Url.AbsolutePath.Equals(Url.Action("Index", "Color"), StringComparison.OrdinalIgnoreCase) ? "active" : "")">
+                                <a class="nav-link" href="@Url.Action("Index", "Color")">
+                                    <i class="nc-icon nc-palette"></i>
+                                    <p>Màu sắc</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Url.AbsolutePath.Equals(Url.Action("Index", "Customer"), StringComparison.OrdinalIgnoreCase) ? "active" : "")">
+                                <a class="nav-link" href="@Url.Action("Index", "Customer")">
+                                    <i class="nc-icon nc-favourite-28"></i>
+                                    <p>Khách hàng</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Url.AbsolutePath.Equals(Url.Action("Index", "Category"), StringComparison.OrdinalIgnoreCase) ? "active" : "")">
+                                <a class="nav-link" href="@Url.Action("Index", "Category")">
+                                    <i class="nc-icon nc-album-2"></i>
+                                    <p>Danh mục</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Url.AbsolutePath.Equals(Url.Action("Index", "Type"), StringComparison.OrdinalIgnoreCase) ? "active" : "")">
+                                <a class="nav-link" href="@Url.Action("Index", "Type")">
+                                    <i class="nc-icon nc-backpack"></i>
+                                    <p>Loại</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Url.AbsolutePath.Equals(Url.Action("Index", "Bill"), StringComparison.OrdinalIgnoreCase) ? "active" : "")">
+                                <a class="nav-link" href="@Url.Action("Index", "Bill")">
+                                    <i class="nc-icon nc-paper-2"></i>
+                                    <p>Đơn hàng</p>
+                                </a>
+                            </li>
+                     
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "Home")">
+                                    <i class="nc-icon nc-album-2"></i>
+                                    <p>Trang chủ</p>
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-lg-9">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+     
+    </div>
+</body>
+</html>

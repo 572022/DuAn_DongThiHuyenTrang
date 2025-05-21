@@ -1,0 +1,109 @@
+﻿
+
+<div class="container-fluid nav_menu " style="top:0; padding:0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2 text-center">
+        <a class="navbar-brand p-1" href="#">
+            <img src="~/Images/logo.png" alt="" width="200"
+                 height="35">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="@Url.Action("Home", "Clothes")">
+                        Trang Chủ
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Top
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new {id= 0,id2=1})">Tees</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new { id = 0,id2=2})">Shirts</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new {id=0,id2=5})">Jackets</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new {id=0,id2=6})">Hoodie & Sweater</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        BOTTOM
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new {id=0,id2=3})">Long Pants</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new {id=0,id2=4})">Short Pants</a></li>
+
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("clothes_Type", "Clothes", new { id = 3 ,id2=0})" tabindex="-1" aria-disabled="true">ACCESSORIES</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <div class="fas" onclick="on_search()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </div>
+
+                <div id="userStatus" style="color:white;">
+                    @if (Session["Username"] != null)
+                    {
+                        <!-- Nếu đã đăng nhập, hiển thị "Xin chào, Username" với biểu tượng Font Awesome -->
+                    <div class="fas" style="margin-right:0px;">
+                        <a class="nav-link" href="@Url.Action("MyAccount", "Account")" tabindex="-1" aria-disabled="true"><i class="far fa-user"></i></a> 
+                    </div>
+                        @Session["Username"].ToString()
+                    }
+                    else
+                    {
+                        <!-- Nếu chưa đăng nhập, hiển thị nút đăng nhập với biểu tượng Font Awesome -->
+                        <div class="fas">
+                            <a href="@Url.Action("LogIn", "Account")">
+                                <i class="fa-solid fa-user" style="color:white; font-size:20px;"></i>
+                            </a>
+                        </div>
+                    }
+                </div>
+                <div class="fas" onclick="openNav()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    @Html.Action("GioHangPartial", "Cart")
+                </div>
+            </form>
+        </div>
+    </nav>
+</div>
+
+<!-- ===================nav_search -->
+<div class="container-fluid bg-light" id="navigation_search">
+    <div class="input-search inline-block">
+        <div class="closebtn " onclick="close_search()">&times;</div>
+        <form action="/Clothes/Search" method="get">
+            <input type="text" name="content" placeholder="Nhập từ khóa tìm kiếm..." class="navigation_search">
+            <button type="submit" class="btn-navigation"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+    </div>
+
+    <hr>
+    <p>Gõ từ khóa mà bạn muốn tìm kiếm</p>
+
+</div>
+<!-- ===================giỏ hàng -->
+<div class="cart" id="cart">
+    <div class="cart-title">
+        <h4 class="">Giỏ hàng</h4>
+        <span id="close-cart" onclick="closeNav()">&#10006;</span>
+    </div>
+
+ 
+@Html.Action("GioHangRightPartial","Cart")
+    
+
+
+
+    <!--Total-->
+
+</div>

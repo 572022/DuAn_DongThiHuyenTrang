@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layoutuser.cshtml";
+}
+
+<h2>View</h2>
+@model IEnumerable<WebsiteQuanAo.Models.DanhMuc>
+<div class="filter-color">
+    <ul class="filter-list list-unstyled">
+        @foreach (var i in Model)
+        {
+            <li>
+                <a href="#">
+                    <input type="checkbox" name="" id="">@i.TenDM
+                </a>
+            </li>
+        }
+
+    </ul>
+</div>

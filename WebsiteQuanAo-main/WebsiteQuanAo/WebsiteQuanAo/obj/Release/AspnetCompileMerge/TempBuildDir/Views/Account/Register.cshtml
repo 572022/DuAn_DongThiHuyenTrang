@@ -1,0 +1,182 @@
+﻿@model WebsiteQuanAo.Models.User
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layoutuser.cshtml";// Điều chỉnh đường dẫn đến layout của bạn
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Au Register Forms by Colorlib</title>
+
+    <!-- Icons font CSS-->
+    <link href="~/colorlib-regform-4/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="~/colorlib-regform-4/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="~/colorlib-regform-4/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="~/colorlib-regform-4/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="~/colorlib-regform-4/css/main.css" rel="stylesheet" media="all">
+    <style>
+        .form-checkbox {
+            width: 50px;
+            margin-bottom: 8px;
+        }
+
+        .error-message {
+            color: red
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680" style="max-width:680px;">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Register</h2>
+                    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    @Html.LabelFor(model => model.Fullname, new { @class = "label" }) <p style="color:red">&nbsp;*</p>
+                                    @Html.TextBoxFor(model => model.Fullname, new { @class = "input--style-4", @name = "first_name" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Fullname, "", new { @class = "error-message" })
+
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    @Html.LabelFor(model => model.Address, new { @class = "label" }) <p style="color:red">&nbsp;*</p>
+                                    @Html.TextBoxFor(model => model.Address, new { @class = "input--style-4", @name = "last_name" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "error-message" })
+
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    @Html.LabelFor(model => model.Email, new { @class = "label" }) <p style="color:red">&nbsp;*</p>
+                                    @Html.TextBoxFor(model => model.Email, new { @class = "input--style-4", @name = "email" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "error-message" })
+
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    @Html.LabelFor(model => model.PhoneNum, new { @class = "label" }) <p style="color:red">&nbsp;*</p>
+                                    @Html.TextBoxFor(model => model.PhoneNum, new { @class = "input--style-4", @name = "phone" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.PhoneNum, "", new { @class = "error-message" })
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    @Html.LabelFor(model => model.Username, new { @class = "label" }) <p style="color:red">&nbsp;*</p>
+                                    @Html.TextBoxFor(model => model.Username, new { @class = "input--style-4", @name = "username" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "error-message" })
+
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    @Html.LabelFor(model => model.Gender, new { @class = "label" }) <p style="color:red">&nbsp;*</p>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">
+                                            Male
+                                            @Html.RadioButtonFor(model => model.Gender, true, new { id = "male", @name = "gender" })
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">
+                                            Female
+                                            @Html.RadioButtonFor(model => model.Gender, false, new { id = "female", @name = "gender" })
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "error-message" })
+
+                            </div>
+
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    @Html.LabelFor(model => model.Password, new { @class = "label" }) <p style="color:red">&nbsp;*</p>
+                                    @Html.PasswordFor(model => model.Password, new { @class = "input--style-4", @name = "password" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "error-message" })
+
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    @Html.LabelFor(model => model.ConfirmPassword, new { @class = "label" })<p style="color:red">&nbsp;*</p>
+                                    @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "input--style-4", @name = "confirm_password" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "error-message" })
+
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            @Html.LabelFor(model => model.ShowPassword, new { @id = "showPasswordLabel", @class = "form-label" })
+                            @Html.CheckBoxFor(model => model.ShowPassword, new { id = "showPasswordCheckbox", @class = "form-checkbox" })
+                        </div>
+
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Đăng ký</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="~/colorlib-regform-4/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="~/colorlib-regform-4/vendor/select2/select2.min.js"></script>
+    <script src="~/colorlib-regform-4/vendor/datepicker/moment.min.js"></script>
+    <script src="~/colorlib-regform-4/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="~/colorlib-regform-4/js/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#showPasswordCheckbox').change(function () {
+            var passwordInput = $('#Password'); // Thay 'Password' bằng id của trường mật khẩu
+            var confirmPasswordInput = $('#ConfirmPassword'); // Thay 'ConfirmPassword' bằng id của trường xác nhận mật khẩu
+
+            if (this.checked) {
+                passwordInput.attr('type', 'text');
+                confirmPasswordInput.attr('type', 'text');
+            } else {
+                passwordInput.attr('type', 'password');
+                confirmPasswordInput.attr('type', 'password');
+            }
+        });
+    });
+</script>

@@ -1,0 +1,77 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{text-decoration:none;
+  color:aliceblue;
+}
+.column:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+button {
+/*    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;*/
+    cursor: pointer;
+}
+
+.inp {
+    border: 2px solid #ededed;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.tomtatsp {
+    text-align: center;
+    
+}
+
+.thanhtoan {
+    width: 100%;
+    height: auto;
+    background-color: #f6f6f6;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0px;
+
+}
+
+    .thanhtoan button {
+        width: 100%;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        margin: 10px 0px;
+    }
+
+.btn_tt a{
+    font-size:1.2rem;
+    font-weight:bold;
+    text-decoration:none;
+    color:black; 
+    margin-right:5px;
+    
+}
+    .btn_tt a:hover, .btn_tt input:hover {
+        color: #315a9d;
+    }
+    .btn_tt input {
+        border:none;
+        background-color:transparent;
+    }
+.sp_tensp{
+    font-size:14px;
+   
+}

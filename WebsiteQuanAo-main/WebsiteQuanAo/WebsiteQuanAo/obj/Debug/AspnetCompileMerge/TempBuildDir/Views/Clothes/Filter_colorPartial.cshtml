@@ -1,0 +1,18 @@
+﻿@model IEnumerable<WebsiteQuanAo.Models.Color>
+<div class="filter-color">
+    <ul class="filter-list list-unstyled">
+        @foreach (var i in Model)
+        {
+            <li style="padding-top:10px; margin-left:20px;">
+                <a href="@Url.Action("Filter_color","clothes",new { id = i.idColor, nameColor=i.nameColor})">
+                    @*<input type="checkbox" name="" id="">*@
+        @i.nameColor
+                </a>
+            </li>
+        }
+
+    </ul>
+</div>
+
+
+

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WebMULTI.Models.Productimg>
+@{
+    ViewBag.Title = "Createimg";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<head>
+    <style>
+        .dv{
+            width:100%;
+            margin-top:20px;
+        }
+        .dv img {
+          border-radius: 10px;
+          width: 140px;
+          margin:5px ;
+
+         }
+       
+    </style>
+</head>
+<h2>Thêm ảnh cho sản phẩm</h2>
+<label for="file">Select Image:</label>
+
+@using (Html.BeginForm("Createimg", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <table class="table">
+        <tr>
+            <td>
+                <input type="file" name="file1" id="file1" onchange="displayImage('file1', 'previewImage1')" />
+
+            </td>
+            <td>
+                <img id="previewImage1" src="#" alt="Ảnh xem trước" style="display: none; max-width: 150px; max-height: 150px; border-radius:10px;" />
+
+            </td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <input type="submit" value="Upload" class="btn btn-primary" />
+    </div>
+}
+<h3>Đây là một số ảnh từ sản phẩm bạn vừa chọn</h3>
+<i style="color: red;">Lưu ý: ảnh này sẽ được hiển thị trong slide của mục chi tiết sản phẩm của khách hàng!</i>
+<div class="dv">
+
+    @foreach (var i in Model)
+    {
+        <img src="~/img/@i.nameimg" alt="Ảnh xem trước" border-radius:10px;" />
+    }
+    </div>
+    @*@Html.ActionLink("Sửa", "Editimg", new { id = Model.MaSP }) |
+        @Html.ActionLink("VỀ TRANG QUẢN LÝ MÀU", "Index")*@
+
+
+    <script>
+        function displayImage(inputId, previewId) {
+            var input = document.getElementById(inputId);
+            var previewImage = document.getElementById(previewId);
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                };
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                previewImage.src = '#';
+                previewImage.style.display = 'none';
+            }
+        }
+    </script>

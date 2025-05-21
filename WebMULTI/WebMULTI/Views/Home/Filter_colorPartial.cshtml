@@ -1,0 +1,83 @@
+﻿@model IEnumerable<WebMULTI.Models.Color>
+
+<head>
+    <style>
+        .filter-color li {
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            margin: 0px 10px 5px 0px;
+            border: 1px solid #d6c9c9;
+        }
+
+        .filter-color .active {
+            border: 2px solid #d380a0;
+            box-shadow: 3px 1px 3px #120e0ec7;
+        }
+
+        .filter-list {
+            display: flex;
+            width: 200px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<div class="filter-color">
+    <ul class="filter-list list-unstyled">
+        <ul class="filter-list list-unstyled">
+            @foreach (var i in Model)
+            {
+                string currentId = Request.QueryString["id"];
+                string currentNameColor = Request.QueryString["nameColor"];
+
+                bool isActive = currentId == i.idColor.ToString() && currentNameColor == i.Ecolor;
+
+                // Tên class sẽ chứa tên màu, chẳng hạn class="nav-item active-black"
+                string liClass = "nav-item" + (isActive ? " active-" + i.Ecolor.ToLower() : "");
+
+                <li class="@liClass" style="background: @i.Ecolor" data-color="@i.Ecolor" onclick="setActive(this)">
+                    <a class="nav-link" href="@Url.Action("Filter_color", "Home", new { id = i.idColor, nameColor = i.Ecolor })">
+                        <i class="fa fa-dashboard"></i>
+                     
+                    </a>
+                </li>
+            }
+        </ul>
+
+    </ul>
+
+</div>
+<script>
+    function setActive(element) {
+        // Xóa class "active" từ tất cả các thẻ <li>
+        var allListItems = document.querySelectorAll('.nav-item');
+        allListItems.forEach(function (item) {
+            item.classList.remove('active');
+        });
+
+        // Thêm class "active" vào thẻ <li> được nhấp vào
+        element.classList.add('active');
+
+        // Lưu trạng thái vào local storage
+        var activeColor = element.getAttribute('data-color');
+        localStorage.setItem('activeColor', activeColor);
+    }
+
+    // Gọi hàm khi trang được tải
+    document.addEventListener("DOMContentLoaded", function () {
+        // Lấy trạng thái từ local storage
+        var activeColor = localStorage.getItem('activeColor');
+
+        // Nếu có trạng thái, thêm class "active" vào thẻ li tương ứng
+        if (activeColor) {
+            var activeElement = document.querySelector('.nav-item[data-color="' + activeColor + '"]');
+            if (activeElement) {
+                activeElement.classList.add('active');
+            }
+        }
+    });
+</script>
+
+
+
+

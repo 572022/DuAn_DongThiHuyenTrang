@@ -1,0 +1,44 @@
+﻿@model WebMULTI.Models.DanhMuc
+
+@{
+	ViewBag.Title = "Quản lý danh mục";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+	img {
+		width: 200px;
+	}
+
+	.dl-horizontal dt {
+		font-weight: bold;
+	}
+
+	.dl-horizontal dd {
+		margin-left: 200px;
+	}
+</style>
+<h4>XÓA DANH MỤC</h4>
+
+<h5>Bạn thật sự muốn xóa?</h5>
+<h6 style="color:red">@Html.Raw(ViewBag.ThongBao)</h6>
+
+<div>
+	<hr />
+    <table>
+        <tr>
+            <td style="font-weight:400;">Tên danh mục:</td>
+            <td> @Html.DisplayFor(model => model.TenDM)</td>
+        </tr>
+    </table>
+	
+	@using (Html.BeginForm())
+	{
+		@Html.AntiForgeryToken()
+
+		<div class="form-actions no-color" style="margin-top:30px;">
+			<input type="submit" value="Xóa" class="btn btn-default" /> |
+			@Html.ActionLink("VỀ TRANG QUẢN LÝ DANH MỤC", "Index")
+		</div>
+	}
+</div>

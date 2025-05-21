@@ -1,0 +1,146 @@
+﻿@model WebsiteQuanAo.Models.SanPham
+
+@{
+    ViewBag.Title = "Quản lý sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<script src="//cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
+
+<script src=" @Url.Content("~/ckfinder/ckfinder.js")"
+        type="text/javascript"></script>
+<script type="text/javascript">
+CKFinder.setupCKEditor(null, ' @Url.Content("~/ckfinder/")');
+</script>
+<style>
+    .form-horizontal {
+        margin: 20px;
+    }
+
+    .control-label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        background-color: #007BFF;
+        color: #fff;
+    }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+    .text-danger {
+        color: red;
+    }
+    /* Điều chỉnh định dạng cho CKEditor */
+    .cke {
+        border: 1px solid #ccc;
+    }
+    /* Điều chỉnh định dạng cho Dropdowns */
+    select.form-control {
+        width: 100%;
+    }
+</style>
+
+<h4>THÊM SẢN PHẨM</h4>
+@using (Html.BeginForm("Edit", "Product", FormMethod.Post, new
+{
+    enctype = "multipart/form-data"
+}))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="control-label col-md-2">Mã sản phẩm:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="iMaSP" value="@Model.MaSP" readonly />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Tên sản phẩm:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="sTenSP" value="@Model.TenSP" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Mô tả:</label>
+            <div class="col-md-10">
+                <textarea name="sMoTa" id="mota" required>@Model.Mota</textarea>
+                <script>CKEDITOR.replace('mota'); CKFinder.setupCKEditor(null, '/ckfinder');</script>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Ảnh sản phẩm:</label>
+            <div class="col-md-10">
+                <input type="file" name="fFileUpload" />
+                <img src="~/Images/@Model.AnhBia" width="120"> (Ảnh hiện tại)
+                @ViewBag.ThongBao
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Giá:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="mGiaBan" value="@Model.GiaSP" min="1" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Kích cỡ:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="sSize" value="@Model.Size" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Số lượng tồn:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="iSoLuong" value="@Model.SoLuongTon" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Ngày nhập:</label>
+            <div class="col-md-10">
+                <input type="datetime" name="dNgayNhap" required
+                       value="@Convert.ToDateTime(Model.NgayNhap)" />
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaDM, "Danh mục", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("MaDM")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaLoai, "Loại", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("MaLoai")
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.idColor, "Màu", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idColor")
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Cập nhật" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @Html.ActionLink("VỀ TRANG QUẢN LÝ SẢN PHẨM", "Index")
+</div>

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<WebMULTI.Areas.Admin.Models.ListColor>
+
+@{
+    ViewBag.Title = "ListColor";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>ListColor</h2>
+
+
+<table class="table">
+
+    
+
+@foreach (var item in Model) {
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Ecolor)
+        </td>
+        
+}
+
+</table>

@@ -1,0 +1,305 @@
+﻿@model WebsiteQuanAo.Models.KhachHang
+
+@{
+    ViewBag.Title = "MyAccount";
+    Layout = "~/Views/Shared/_Layoutuser.cshtml";
+}
+<head>
+    <style>
+        .container {
+            margin: 5rem 2rem;
+        }
+
+        .active {
+            background-color: #f1f1f1;
+        }
+
+        .btn {
+            width: 150px;
+        }
+
+            .btn a {
+                text-decoration: none;
+                color: #fff;
+                padding: 5px;
+                margin: 20px;
+            }
+        /*tabs*/
+        /* Style the tab */
+        .tab {
+            float: left;
+           
+            width: 25%;
+            height: auto;
+        }
+
+            /* Style the buttons inside the tab */
+            .tab button {
+                display: block;
+                background-color: inherit;
+                color: black;
+                padding: 15px 16px;
+                width: 100%;
+                border: none;
+                outline: none;
+                text-align: left;
+                cursor: pointer;
+                transition: 0.3s;
+                font-size: 17px;
+                border:1px solid #e9dbdb73
+            }
+
+                /* Change background color of buttons on hover */
+                .tab button:hover {
+                    background-color: #61b2f0;
+                }
+
+                /* Create an active/current "tab button" class */
+                .tab button.active {
+                    background-color: #61b2f0;
+                }
+
+        /* Style the tab content */
+        .tabcontent {
+            float: left;
+            padding: 0px 12px;
+            border: 1px solid #ccc;
+            width: 75%;
+            border-left: none;
+           
+        }       
+        footer{
+            clear:both;
+        }
+        .cl_eye {
+            position: relative;
+            width: 550px;
+        }
+            .cl_eye input {
+                width: 550px;
+                padding: 4px 10px;
+                border: 2px solid #e5e5e5;
+            }
+            .eye {
+                position: absolute;
+                line-height: 38px;
+                right:10px;
+            }
+        .eye-close{
+            
+        }
+        .hidden{
+            display:none;
+        }
+        #edit {
+           padding: 20px 4rem;
+           line-height:35px;
+        }
+        label{
+            font-weight:500;
+        }
+    </style>
+
+</head>
+<div class="container">   
+    <div class="tab">
+        <button class="tablinks" onclick="Nav_left(event, 'inf')" id="defaultOpen">Tài khoản</button>
+        <button class="tablinks" onclick="Nav_left(event, 'donhang')">Đơn hàng</button>
+        <button class="tablinks" onclick="Nav_left(event, 'edit')">Sửa tài khoản </button>
+        <button type="button" class="" onclick="ask()">
+            <a style="color:black;text-decoration:none;" href="#">Đăng xuất</a>
+        </button>
+    </div>
+    
+            <div id="inf" class="tabcontent">
+                <div class="">
+                    <h4 class="text-center">THÔNG TIN TÀI KHOẢN</h4>
+                    <hr />
+                    <table class="table" style="width: 500px; margin: 0px auto;">
+                        <tr>
+                            <td>
+                                Họ tên
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(model => model.HoTen)
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>     Giới tính</td>
+                            <td>
+                                @if (Model.GioiTinh)
+                                {
+                                    <text>Nữ</text>
+                                }
+                                else
+                                {
+                                    <text>Nam</text>
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Địa chỉ</td>
+                            <td> @Html.DisplayFor(model => model.DiaChi)</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td> @Html.DisplayFor(model => model.Email)</td>
+                        </tr>
+                        <tr>
+                            <td>Số điện thoại</td>
+                            <td> @Html.DisplayFor(model => model.SDT)</td>
+                        </tr>
+                    </table>
+                   
+
+
+                </div>
+            </div>
+
+            <div id="donhang" class="tabcontent">
+                <h4>Quản lý đơn đặt hàng</h4>
+                @Html.Action("qldonhang", "Account")
+            </div>
+
+            <div id="edit" class="tabcontent">
+          
+              
+                @using (Html.BeginForm("ChangePass", "Account", FormMethod.Post, new
+                {
+                    @enctype = "multipart/form-data"
+                }))
+                {
+                    @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="col-md-10 cl_eye">
+                                <label>Họ và tên</label>
+                                @Html.TextBoxFor(model => model.HoTen, new { @class = "input--style-4", @name = "hoten" })
+                            </div>
+                        </td>              
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="col-md-10 cl_eye">
+                                <label>Tên hiển thị</label>
+                                @Html.TextBoxFor(model => model.Username, new { @class = "input--style-4", @name = "username" })
+                                <span>
+                                    <i>
+                                        Tên này sẽ được hiển thị trong trang Tài Khoản và phần đánh giá sản phẩm
+
+                                    </i> </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="col-md-10 cl_eye">
+                                <label>Địa chỉ Email</label>
+                                @Html.TextBoxFor(model=>model.Email, new {@name="email"})                        
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <fieldset>
+                    <legend>Thay đổi mật khẩu</legend>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Mật khẩu hiện tại:</label>
+                        <div class="col-md-10 cl_eye">
+                            <input type="password" size="70" name="CurPass" required class="input" />
+
+                            <i class="fa-regular fa-eye-slash eye-close eye hidden"></i>
+                            <i class="fa-regular fa-eye eye-open eye"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Mật khẩu mới:</label>
+                        <div class="col-md-10 cl_eye">
+                            <input type="password" size="70" name="NewPass" required class="input" onkeyup="validatePassword()" id="NewPass"/>
+                            <i class="fa-regular fa-eye-slash eye-close eye hidden"></i>
+                            <i class="fa-regular fa-eye eye-open eye"></i>
+                            <div id="error"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Xác nhận mật khẩu mới:</label>
+                        <div class="col-md-10 cl_eye">
+                            <input type="password" size="70" name="CormNewPass" required class="input"  />
+
+                            <i class="fa-regular fa-eye-slash eye-close eye hidden"></i>
+                            <i class="fa-regular fa-eye eye-open eye"></i>
+                        </div>
+                    </div>
+                </fieldset>
+
+
+                <div class="form-group mt-2">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="LƯU THAY ĐỔI" class="btn btn-dark" />
+                    </div>
+                </div>
+            </div>
+                }
+            </div>
+            @*end*@         
+        </div>
+
+
+<script>
+  
+    function Nav_left(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+
+    document.getElementById("defaultOpen").click();
+    var inputs = document.querySelectorAll(".input");
+    var eyeOpens = document.querySelectorAll(".eye-open");
+    var eyeCloses = document.querySelectorAll(".eye-close");
+
+    for (var i = 0; i < eyeOpens.length; i++) {
+        eyeOpens[i].addEventListener("click", function (event) {
+            // lấy chỉ số của thẻ eyeopen được nhấn
+            var index = Array.from(eyeOpens).indexOf(this)
+            event.preventDefault();
+            var input = inputs[index];
+            eyeOpens[index].classList.add("hidden");
+            eyeCloses[index].classList.remove("hidden");
+            input.setAttribute("type", "text");
+        });
+    }
+
+    for (var i = 0; i < eyeCloses.length; i++) {
+        eyeCloses[i].addEventListener("click", function (event) {
+            var index = Array.from(eyeCloses).indexOf(this)
+            var input = inputs[index];
+            eyeCloses[index].classList.add("hidden");
+            eyeOpens[index].classList.remove("hidden");
+            input.setAttribute("type", "password");
+        });
+    }
+    function ask() {
+        var xacnhan = confirm("Bạn có muốn đăng xuất không?");
+        if (xacnhan) {
+            var logoutUrl = '@Url.Action("LogOut", "Account")';
+            window.location.href = logoutUrl;
+        } else {
+
+        }
+    }
+</script>

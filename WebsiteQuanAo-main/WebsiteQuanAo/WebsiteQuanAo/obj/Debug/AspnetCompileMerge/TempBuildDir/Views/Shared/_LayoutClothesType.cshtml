@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Noctual Shop</title>
+    <link rel="icon" href="~/Images/logo_title.png" type="image/icon type">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/Content/layounew1.css">
+
+    <script src="~/Content/jsnew.js"></script>
+    @RenderSection("Scripts", false/*required*/)
+    <style>
+      
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+        .cl-filter {
+      
+            position: relative
+        }
+
+       #filter {               
+              
+                width: 10rem;
+                background-color: aqua;
+                height: auto;
+       }
+        .li_filter:hover {
+            background-color: cadetblue;
+        }
+        .active {
+            background-color: cadetblue!important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+  
+    <div class="container-fluid nav_menu " style="top:0; padding:0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2 text-center">
+            <a class="navbar-brand p-1" href="#">
+                <img src="~/Images/logo.png" alt="" width="200"
+                     height="35">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="@Url.Action("Home", "Clothes")">
+                            Trang Chủ
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="">
+                            TOP
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new {id= 0,id2=1})">Tees</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new { id = 0,id2=2})">Shirts</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new {id=0,id2=5})">Jackets</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new {id=0,id2=6})">Hoodie & Sweater</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            BOTTOM
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new {id=0,id2=3})">Long Pants</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("clothes_Type", "Clothes", new {id=0,id2=4})">Short Pants</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("clothes_Type", "Clothes", new { id = 3 ,id2=0})" tabindex="-1" aria-disabled="true">ACCESSORIES</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <div class="fas" onclick="on_search()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+                    <div class="fas">
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+                    <div class="fas" onclick="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+    @{
+        Html.RenderPartial("_NavPartial");
+    }
+    <!-- ===================nav_search -->
+    <div class="container-fluid bg-light" id="navigation_search">
+        <div class="input-search inline-block">
+            <div class="closebtn " onclick="close_search()">&times;</div>
+            <form action="/Clothes/Search" method="get">
+                <input type="text" name="content" placeholder="Nhập từ khóa tìm kiếm..." class="navigation_search">
+                <button type="submit" class="btn-navigation"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+        </div>
+
+        <hr>
+        <p>Gõ từ khóa mà bạn muốn tìm kiếm</p>
+
+    </div>
+
+    <!-- ===================nav_search -->
+    <div class="container-fluid bg-light" id="navigation_search">
+        <div class="input-search inline-block">
+            <div class="closebtn " onclick="close_search()">&times;</div>
+            <form action="/Clothes/Search" method="get">
+                <input type="text" name="content" placeholder="Nhập từ khóa tìm kiếm..." class="navigation_search">
+                <button type="submit" class="btn-navigation"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+        </div>
+
+        <hr>
+        <p>Gõ từ khóa mà bạn muốn tìm kiếm</p>
+
+    </div>
+
+
+
+    <div class="container " style="margin-top:5rem;">
+        
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-3">
+
+                <div class="cl-filter">
+                    <ul id="filter" class="list-group list-group-flush">
+                        @if (ViewBag.active == 1)
+                        {
+                            <li class="list-group-item li_filter active">
+                                <a class="nav-link" aria-current="page" href="@Url.Action("btnFilter", "Clothes", new {id=1})">
+                                    Mới nhất
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="list-group-item li_filter ">
+                                <a class="nav-link" aria-current="page" href="@Url.Action("btnFilter", "Clothes", new {id=1})">
+                                    Mới nhất
+                                </a>
+                            </li>
+                        }
+                        @if (ViewBag.active == 2)
+                        {
+                            <li class="list-group-item li_filter active">
+                                <a class="nav-link" aria-current="page" href="@Url.Action("btnFilter", "Clothes",new {id=2})">
+                                    Thấp đến cao
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="list-group-item li_filter ">
+                                <a class="nav-link" aria-current="page" href="@Url.Action("btnFilter", "Clothes",new {id=2})">
+                                    Thấp đến cao
+                                </a>
+                            </li>
+                        }
+                        @if(ViewBag.active == 3)
+                        {
+                        <li class="list-group-item li_filter active">
+                            <a class="nav-link" aria-current="page" href="@Url.Action("btnFilter", "Clothes",new {id=3})">
+                                Cao đến thấp
+                            </a>
+                        </li>
+                         }
+                        else
+                        {
+                    <li class="list-group-item li_filter ">
+                        <a class="nav-link" aria-current="page" href="@Url.Action("btnFilter", "Clothes",new {id=3})">
+                            Cao đến thấp
+                        </a>
+                    </li>
+                       }
+
+
+                        
+                    </ul>
+                </div>
+
+                <!-- lọc theo màu -->
+                @Html.Action("Filter_colorPartial", "Clothes")
+                <hr>
+                <!-- đánh giá mới nhất -->
+                @Html.Action("ProductComments", "Clothes")
+            </div>
+
+
+            <div class="col-lg-8 text-center " style="margin:1rem;">
+                <!--  danh mục sản phẩm clothes_Type-->
+                @RenderBody()
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-light ">
+        <!-- Section: Social media -->
+        <section class="d-flex  justify-content-lg-between pb-0 pt-5
+   border-bottom border-top">
+
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-2">
+                <div class="row">
+                    <div class="col-md-2 col-lg-2   mx-auto ">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+                    <div class="col-md-3 col-lg-10 mx-auto ">
+                        <h6 class="text-uppercase fw-bold ">
+                            </i>Vận chuyển siêu tốc
+                        </h6>
+                        <p>
+                            Trong ngày tại Thủ Dầu Một
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-2">
+                <div class="row">
+                    <div class="col-md-2 col-lg-2   mx-auto ">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    </div>
+                    <div class="col-md-3 col-lg-10 mx-auto ">
+                        <h6 class="text-uppercase fw-bold ">
+                            Miễn phí đổi trả
+                        </h6>
+                        <p>
+                            Trong vòng 03 ngày sau khi nhận hàng
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-2">
+                <div class="row">
+                    <div class="col-md-2 col-lg-2   mx-auto ">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div class="col-md-3 col-lg-10 mx-auto ">
+                        <h6 class="text-uppercase fw-bold ">
+                            Tư vấn - hộ trợ
+                        </h6>
+                        <p>
+                            9:30 - 21:30 hàng ngày
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-2">
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <h3>nocturnal</h3>
+                        <p>Hộ kinh doanh NocLaBel</p>
+                        <p>Địa chỉ: TDM, Bình Dương</p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <h3>ADDRESS</h3>
+                        <p>Hộ kinh doanh NocLaBel</p>
+                        <p>Thứ hai- chủ nhật: 9:00-21:30</p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <h3>CUSTOMER</h3>
+                        <p>Yêu cầu hỗ trợ</p>
+                        <p>Membership</p>
+                        <p>Hưỡng dẫn thanh toán</p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <img src="~/Images/footer.jpg" alt="" style="width:80%">
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Grid row -->
+
+        </section>
+        <!-- Section: Links  -->
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            NOCTURNAL &#169;	 2023 ALL RIGHTS RESERVED.
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-angles-up"></i></button>
+
+    <script>
+
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+        //scroll top: vị trí hiện tại
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        //     navigation-search
+        function on_search() {
+            document.getElementById("navigation_search").style.height = "100%";
+        }
+        function close_search() {
+            document.getElementById("navigation_search").style.height = "0%";
+        }
+
+
+    </script>
+</body>
+
+</html>
+

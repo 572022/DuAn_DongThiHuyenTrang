@@ -1,0 +1,23 @@
+﻿
+@using WebMULTI.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<SanPham>
+<!-- Products Start -->
+
+<div class="container-fluid pt-5 pb-3" style="margin:0;">
+    <h2>SẢN PHẨM BÁN CHẠY</h2>
+    @{
+        Html.RenderPartial("_layoutpd");
+    }
+</div>
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }),
+  new PagedListRenderOptions
+  {
+      //thiết lập class cho thẻ li
+      LiElementClasses = new[] { "page-item" }
+
+      })
+</div>
+   Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount
+<!-- Products End -->

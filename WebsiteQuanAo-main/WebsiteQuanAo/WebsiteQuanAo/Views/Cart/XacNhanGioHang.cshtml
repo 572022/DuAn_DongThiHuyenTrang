@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "XacNhanGioHang";
+    Layout = "~/Views/Shared/_Layoutuser.cshtml";
+}
+@model List<WebsiteQuanAo.Models.CT_SP>
+@*@model WebsiteQuanAo.Models.twotable*@
+
+<head>
+    <style>
+
+        .container {
+            margin: 8rem auto;
+            text-align: center;
+        }
+
+            .container h2 {
+                color: brown;
+            }
+
+        table {
+            border: 2px solid red;
+            margin: 2.5rem 0px;
+        }
+
+            table:last-child {
+                text-align: left;
+            }
+    </style>
+
+</head>
+<div class="container" style="">
+    <h2>Cảm ơn bạn. Đơn hàng của bạn đã được nhận.</h2>
+    <h3>Hãy kiểm tra chi tiết đơn hàng trong <a href="@Url.Action("MyAccount","Account")">Tài khoản</a> của bạn</h3>
+    @*<table border="1" class="table">
+
+        <tr>
+            <td> Tên Sản phẩm</td>
+
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>
+                    @i.TenSP
+                </td>
+            </tr>
+        }
+        @ViewBag.TongTien
+    </table>*@
+    </div>
+
+

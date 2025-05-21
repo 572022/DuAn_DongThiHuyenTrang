@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "clothes_Type";
+    Layout = "~/Views/Shared/_LayoutClothesType.cshtml";
+}
+@model IEnumerable<WebsiteQuanAo.Models.SanPham>
+<h5 style="color:darkred; text-align:left">@ViewBag.title_type</h5>
+<div class="row">
+    <h1 style="color: red;">
+        @ViewBag.ThongBaosearch<strong style="color:blue"> @ViewBag.content</strong>
+    </h1>
+
+    <!-- col-product -->
+    @foreach (var i in Model)
+    {
+        <div class="col-lg-4 mb-3 ">
+            <div class="card position-relative">
+
+                <div class="cart_hover">
+                    <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Thêm vào giỏ hàng">
+                    </span>
+                    <a href="@Url.Action("ThemGioHang", "Cart", new { ms = i.MaSP, url = Request.Url.ToString() })">
+                        <img src="/Images/cart.jpg" alt="">
+                    </a>
+                </div>
+                <div class="card-header ">
+                    <a style="text-decoration: none; color:black;" href="@Url.Action("DetailsProduct","Clothes", new { id=i.MaSP})">
+
+                        <img src="~/Images/@i.AnhBia" alt="ảnh sản phẩm">
+                        <p style="height:30px;">@i.TenSP </p>
+                        <div class="star_product">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <strong><span>@Html.FormatValue(@i.GiaSP, "{0:#,##0}") VNĐ</span></strong>
+                    </a>
+                </div>
+
+            </div> <!--  -->
+
+        </div>
+    }
+</div>
+
+
+

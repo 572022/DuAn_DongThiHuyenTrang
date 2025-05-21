@@ -1,0 +1,540 @@
+﻿@model WebsiteQuanAo.Models.ProCom
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "DetailsProduct";
+    Layout = "~/Views/Shared/_Layoutuser.cshtml";
+}
+<head>
+
+    <link href='https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap' rel='stylesheet' type='text/css'>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+          crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    <link href="~/Content/css_DetailsProduct.css" rel="stylesheet" />
+    <style>
+        .add-to-cart .btn-qty {
+            width: 100px;
+            height: 46px;
+        }
+        .monospaced {
+            font-family: 'Ubuntu Mono', monospaced;
+        }
+
+        .add-to-cart .btn-qty {
+            width: 100px;
+            height: 46px;
+        }
+
+        .add-to-cart .btn {
+            border-radius: 0;
+        }
+
+        #imgdiv {
+            overflow: hidden;
+            position: relative;
+            width: 80%;
+            margin-top: 3rem;
+        }
+
+        .zoomable-image {
+            width: 100%; /* Kích thước ban đầu của hình ảnh */
+            transition: transform 0.4s;
+            align-content: center;
+        }
+
+            .zoomable-image:hover {
+                transform: scale(2.5); /* Phóng to hình ảnh khi rê chuột vào */
+                cursor: pointer; /* Biến đổi con trỏ chuột thành mũi tên khi rê chuột vào */
+            }
+
+        .zoomable-image-details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Màu nền và độ mờ khi rê chuột vào */
+            display: none; /* Ẩn chi tiết ban đầu */
+            color: #fff; /* Màu văn bản trong chi tiết */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .image-container:hover .zoomable-image-details {
+            display: block; /* Hiển thị chi tiết khi rê chuột vào */
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            font-family: 'SVN-Product Sans', sans-serif;
+            font-size: 16px;
+        }
+
+        .comment-box {
+            padding: 5px
+        }
+
+        .comment-area textarea {
+            resize: none;
+            width: auto;
+        }
+
+        .form-control:focus {
+            color: black;
+            background-color: #fff;
+            border-color: #ffffff;
+            outline: 0;
+            box-shadow: 0 0 0 1px rgb(255, 0, 0) !important
+        }
+
+        .send {
+            color: #fff;
+            background-color: #ff0000;
+            border-color: #ff0000
+        }
+
+            .send:hover {
+                color: #fff;
+                background-color: #f50202;
+                border-color: #f50202
+            }
+
+        .rating {
+            display: inline-flex;
+            margin-top: -10px;
+            flex-direction: row-reverse;
+        }
+
+            .rating > input {
+                display: none
+            }
+
+            .rating > label {
+                position: relative;
+                width: 20px;
+                font-size: 27px;
+                color: #ffbb00;
+                cursor: pointer;
+            }
+
+                .rating > label::before {
+                    content: "\2605";
+                    position: absolute;
+                    opacity: 0
+                }
+
+                .rating > label:hover:before,
+                .rating > label:hover ~ label:before {
+                    opacity: 1 !important
+                }
+
+            .rating > input:checked ~ label:before {
+                opacity: 1
+            }
+
+            .rating:hover > input:checked ~ label:before {
+                opacity: 0.4
+            }
+
+        .star-filled {
+            color: #ffbb00; /* Đổi màu sao thành màu vàng */
+        }
+
+        .comments-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .comments-column {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .comment {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow: auto;
+            height: 175px; /* Thay đổi giá trị này thành chiều cao mong muốn */
+            position: relative; /* Để sử dụng absolute positioning cho ngày và username */
+        }
+        /* Định dạng cho ngày (bên phải) */
+        .comment-date {
+            position: absolute;
+            top: 15px;
+            right: 10px; /* Khoảng cách từ bên phải */
+        }
+
+        .d-flex {
+            display: flex !important;
+            justify-content: flex-end;
+            margin-top: 5px;
+        }
+
+        .button-buy a {
+            font-size: 14px;
+        }
+
+        #close-cart {
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+
+        .cart-title h4 {
+            font-size: 22px;
+        }
+
+        #delete_product {
+            font-size: 2.5rem;
+        }
+        /*css hướng dẫn chọn size*/
+        .overlay {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 50px;
+  right: 45px;
+  font-size: 60px;
+}
+        .overlay img {
+            width: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            top: 11rem;
+        }
+        #myBtn{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container" id="product-section" style="margin-top:6rem">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col-md-12" id="imgdiv">
+                <img src="~/Images/@Model.procductDetails.SanPham.AnhBia" alt="@Model.procductDetails.SanPham.TenSP" class="img-responsive zoomable-image" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <h2>@Model.procductDetails.SanPham.TenSP</h2>
+            </div>
+            <div class="col-md-12">
+                <span class="label label-primary">@Model.procductDetails.DanhMuc.TenDM</span>
+                <span class="monospaced">#No.@Model.procductDetails.SanPham.MaSP</span>
+            </div>
+            <div class="col-md-12">
+                <p>Màu: @Model.procductDetails.Color.nameColor</p>
+            </div>
+
+            <div class="col-md-4">
+                <span class="monospaced">
+                    @if (Model.procductDetails.SanPham.SoLuongTon > 0)
+                    {
+                        <p style="color: green ">Còn hàng</p>
+                    }
+                    else
+                    {
+                        <p style="color: red ">Hết hàng!</p>
+                    }
+
+                </span>
+            </div>
+            <div class="col-md-12">
+                <h2 class="product-price">@Html.FormatValue(@Model.procductDetails.SanPham.GiaSP, "{0:#,##0}") VNĐ</h2>
+            </div>
+            @using (Html.BeginForm("ThemGioHang1", "Cart", new { ms = Model.procductDetails.SanPham.MaSP, url = Request.Url.ToString() }, FormMethod.Post ))
+            {
+                <div class="col-md-12 bottom-rule">
+                    <div class="row add-to-cart">
+
+                        <div class="col-md-3 product-qty">
+                            <input class="btn btn-default btn-lg btn-qty" id="quantityInput" name="iSoLuong" min="1" value="1" type="number" />
+                        </div>
+                        @Html.HiddenFor(model => model.procductDetails.SanPham.MaSP, new { name = "ms" })                        <div class="col-md-5">
+    @*----submit*@
+                <button type="submit" class="btn btn-lg btn-brand btn-dark">Add to Cart</button>
+
+            </div>
+                    </div>
+                </div>
+                }
+                <div class="col-md-12 bottom-rule top-10"></div>
+                <div class="col-md-12 top-10">
+                    <div class="fa"><i class="fa-sharp fa-light fa-ruler"></i></div>
+                    <div id="myNav" class="overlay">
+                        <span>
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeHD()">&times;</a>
+                            <img src="~/Images/huongdanchonsize.jpg" alt="Alternate Text" />
+                        </span>
+                    </div>
+                    <span style="font-size:20px;cursor:pointer" onclick="openHD()">Hướng dẫn chọn size </span>
+
+                    <!-- Nav tabs -->
+                    <div class="col-md-12 top-10">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading" data-bs-toggle="collapse" data-bs-target="#demo">
+                                    <h4 class="panel-title">
+                                        <span>MÔ TẢ</span>
+                                    </h4>
+                                </div>
+
+
+                                @*<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">Simple collapsible</button>*@
+                                <div id="demo" class="collapse">
+                                    @Html.Raw(@Model.procductDetails.SanPham.Mota.ToString().Replace("\n", "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" data-bs-toggle="collapse" data-bs-target="#demo1">
+                                    <h4 class="panel-title">
+                                        <span>VẬN CHUYỂN</span>
+                                    </h4>
+                                </div>
+                                <div id="demo1" class="collapse">
+                                    <div class="panel-body overflow-auto p-3 bg-light" style="max-height: 200px;">
+                                        <p class="top-10">
+                                            –<b> Đơn hàng nội thành HCM :</b>  dự kiến trong vòng 1-2 ngày sẽ nhận được kể từ ngày chốt đơn.
+                                            Nếu quý khách có nhu cầu nhận hàng trong ngày,
+                                            Quý Khách có thể nhờ nhân viên hỗ trợ giao ngay thông qua các ứng dụng như <b>Ahamove, Grabnow.</b>
+                                            Phí ship sẽ được tính theo giá của ứng dụng.
+                                            <br />
+                                            – <b>Đơn hàng từ các tỉnh thành khác :</b>  dự kiến 2-3 ngày sẽ nhận được kể từ ngày chốt đơn.
+                                            <br />
+                                            Khách hàng sẽ được kiểm tra sản phẩm trước khi thanh toán cho bên vận chuyển.
+                                            Nếu không đồng ý nhận hàng sau khi hàng đã được gửi đi với các lý do cá nhân, quý khách vui lòng thanh toán khoản phí vận chuyển.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" data-bs-toggle="collapse" data-bs-target="#demo2">
+                                        <h4 class="panel-title">
+                                            <span>ĐỔI TRẢ HÀNG</span>
+                                        </h4>
+                                    </div>
+
+                                    <div id="demo2" class="collapse">
+                                        <div class="panel-body overflow-auto p-3 bg-light" style="max-height: 200px;">
+                                            <p class="top-10">
+                                                - Hàng mua online được đổi trong vòng 7 ngày (tính từ ngày in hoá đơn) với điều kiện sản phẩm trong tình trạng nguyên vẹn, còn nguyên tag (chưa cắt) và hóa đơn.
+                                                <br />- Đối với mỗi hóa đơn, khách hàng được đổi hàng 01 lần. Nếu đổi hàng qua kênh online, khách hàng sẽ chịu phí vận chuyển cho việc đổi trả.
+                                                <br />- Khi sản phẩm nhận được bị lỗi ( rách, bị phai màu quá nhiều, …), hoặc không đúng với sản phẩm đặt hàng ( sai mẫu, sai màu, size ) – Trường hợp này , Nocturnal có thể thu hồi và đổi sản phẩm đúng cho khách hàng và chịu phí ship cả 2 chiều .
+                                                <br />- Nocturnal không hỗ trợ đổi các sản phẩm được khuyến mãi, giảm giá, random pack.
+                                                <br />
+                                                <br />Áp dụng trả hàng hoàn tiền với các trường hợp nhận hàng lỗi (đảm bảo hàng còn nguyên tem tag và chưa qua sử dụng) nhưng không muốn đổi sản phẩm khác.
+                                                <br />
+                                                <br />Xin vui lòng liên hệ hotline <b>0879 592 668</b> để được hướng dẫn chi tiết.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
+
+<hr style="border-style: inset; border-width: 1px; color:black" />
+
+<div class="container">
+    <h3>Đánh giá</h3>
+    <div>
+        <label for="sort-comments">Sắp xếp theo:</label>
+        <select id="sort-comments">
+            <option value="newest">Mới nhất</option>
+            <option value="oldest">Cũ nhất</option>
+        </select>
+    </div>
+
+    <div class="comments-container">
+        <div class="comments-column comments-column1">
+            @foreach (var binhLuan in Model.Comments.Take(Model.Comments.Count / 2))
+            {
+                <div class="comment">
+                    <h4>@binhLuan.Username</h4>
+                    <p class="comment-date">@Html.FormatValue(binhLuan.NgayBL, "{0:dd/MM/yyyy}")</p>
+                    @if (int.TryParse(binhLuan.Danhgia, out int danhGiaInt))
+                    {
+                        <div class="fas rating">
+                            @for (int i = 5; i >= 1; i--)
+                            {
+                                <i class="fa-solid @(i <= danhGiaInt ? "fa-star star-filled" : "fa-star far")"></i>
+                            }
+                        </div>
+                    }
+                    <span>( @binhLuan.Danhgia / 5 )</span>
+                    <p class="comment-content">@binhLuan.Noidung</p>
+                </div>
+            }
+        </div>
+
+        <div class="comments-column comments-column2">
+            @foreach (var binhLuan in Model.Comments.Skip(Model.Comments.Count / 2))
+            {
+                <div class="comment">
+                    <h4>@binhLuan.Username</h4>
+                    <p class="comment-date">@Html.FormatValue(binhLuan.NgayBL, "{0:dd/MM/yyyy}")</p>
+                    @if (int.TryParse(binhLuan.Danhgia, out int danhGiaInt))
+                    {
+                        <div class="fas rating">
+                            @for (int i = 5; i >= 1; i--)
+                            {
+                                <i class="fa-solid @(i <= danhGiaInt ? "fa-star star-filled" : "fa-star far")"></i>
+                            }
+                        </div>
+                    }
+                    <span>( @binhLuan.Danhgia / 5 )</span>
+                    <p class="comment-content">@binhLuan.Noidung</p>
+                </div>
+            }
+        </div>
+    </div><!-- end row -->
+    @Html.PagedListPager(Model.Comments, page => Url.Action("DetailsProduct", new { id = Model.procductDetails.SanPham.MaSP, page }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded, MaximumPageNumbersToDisplay = 5 })
+</div><!-- end container -->
+<div class="container">
+    <h3>Thêm đánh giá</h3>
+    <div class="col-md-6">
+        @if (Session["Username"] != null)
+        {
+            if (!ViewBag.HasComment)
+            {
+                using (Html.BeginForm("AddComment", "Clothes"))
+                {
+                    @Html.Hidden("productId", Model.procductDetails.SanPham.MaSP)
+                    <div class="comment-box">
+                        <div>
+                            <label for="rating">Đánh giá của bạn <span style="color:red">*</span>: &nbsp;&nbsp;&nbsp;</label>
+                            <div class="rating">
+                                <input type="radio" name="Rating" id="5" value="5"><label for="5">☆</label>
+                                <input type="radio" name="Rating" id="4" value="4"><label for="4">☆</label>
+                                <input type="radio" name="Rating" id="3" value="3"><label for="3">☆</label>
+                                <input type="radio" name="Rating" id="2" value="2"><label for="2">☆</label>
+                                <input type="radio" name="Rating" id="1" value="1"><label for="1">☆</label>
+                            </div>
+                        </div>
+                        <p><label for="comment">Nhận xét của bạn <span style="color:red">*</span>:</label> </p>
+                        <div class="comment-area">
+                            <textarea name="comment" id="comment" rows="4" cols="80" required></textarea>
+                        </div>
+                        <br />
+                        <div class="mt-4">
+                            <button class="btn btn-success send px-5" type="submit">Gửi đi</button>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p style="font-style:italic; font-weight:bold">Bạn đã bình luận về sản phẩm này rồi.</p>
+            }
+        }
+        else
+        {
+            <p style="font-style:italic; font-weight:bold">
+                Để bình luận, đánh giá bạn cần phải đăng nhập
+                <a href="@Url.Action("LogIn", "Account")" class="txt2">Đăng nhập</a>
+            </p>
+
+        }
+    </div>
+</div><!-- end container -->
+<script type="text/javascript">
+		//Zoom ảnh
+		var image = document.querySelector(".zoomable-image");
+		image.addEventListener("mousemove", function (e) {
+			var rect = image.getBoundingClientRect();
+			var x = e.clientX - rect.left;
+			var y = e.clientY - rect.top;
+
+			var xPercent = (x / rect.width) * 100;
+			var yPercent = (y / rect.height) * 100;
+
+			image.style.transformOrigin = xPercent + "% " + yPercent + "%";
+		});
+	//Phân trang
+    $(document).ready(function () {
+        // Số lượng bình luận trên mỗi trang
+        var pageSize = 2;
+
+        // Số lượng trang cho cả hai cột
+        var pageCount = Math.ceil(@Model.Comments.Count / 2 / pageSize);
+
+        // Kích hoạt phân trang cho cả hai cột
+        function activatePagination(columnId) {
+            $("#" + columnId).pagination({
+                dataSource: new Array(pageCount),
+                pageSize: pageSize,
+                callback: function (data, pagination) {
+                    $("#" + columnId + " .comment").hide();
+                    for (var i = data[0] * pageSize; i < (data[0] + 1) * pageSize; i++) {
+                        $("#" + columnId + " .comment").eq(i).show();
+                    }
+                }
+            });
+        }
+
+        activatePagination("comments-column1");
+        activatePagination("comments-column2");
+	});
+
+
+    function openHD() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeHD() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+
+</script>
+    </body>

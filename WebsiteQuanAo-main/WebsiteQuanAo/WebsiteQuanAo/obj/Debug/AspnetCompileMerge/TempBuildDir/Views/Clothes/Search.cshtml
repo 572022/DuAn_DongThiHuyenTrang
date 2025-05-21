@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebsiteQuanAo.Models.SanPham>
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layoutuser.cshtml";
+    ViewData["Title"] = "Search";
+}
+<div class="container">   
+    <div class="row mt-4">
+        <h1 style="margin:40px; color: red;">
+            @ViewBag.ThongBao
+        </h1>
+        <p> Kết quả tìm kiếm cho: <strong style="color:blue"> @ViewBag.content</strong></p>
+        <!-- col-product -->
+        @foreach (var i in Model)
+        {
+            <div class="col-lg-3 mb-3 text-center">
+                <div class="card position-relative">
+                    <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Thêm vào giỏ hàng">
+                        <div class="cart_hover">
+                            <img src="/Images/cart.jpg" alt="">
+                        </div>
+                    </span>
+
+                    <div class="card-header ">
+                        <img src="~/Images/@i.AnhBia" alt="ảnh sản phẩm">
+                        <p>  @i.TenSP</p>
+                        <div class="star_product">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <strong><span>250,000</span>đ</strong>
+                    </div>
+
+                </div> <!--  -->
+            </div>
+        }
+    </div>
+</div>

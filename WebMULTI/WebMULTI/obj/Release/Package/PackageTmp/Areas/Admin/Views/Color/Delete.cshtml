@@ -1,0 +1,44 @@
+﻿@model WebMULTI.Models.Color
+
+@{
+	ViewBag.Title = "Quản lý màu sắc";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+	img {
+		width: 200px;
+	}
+
+	.dl-horizontal dt {
+		font-weight: bold;
+	}
+
+	.dl-horizontal dd {
+		margin-left: 200px;
+	}
+</style>
+
+<h4>Bạn thật sự muốn xóa?</h4>
+<h6 style="color:red">@Html.Raw(ViewBag.ThongBao)</h6>
+
+<div>
+	<hr />
+    <table>
+        <tr>
+            <td>Màu:</td>
+            <td>@Html.DisplayFor(model => model.nameColor) </td>
+        </tr>
+    </table>
+	
+
+	@using (Html.BeginForm())
+	{
+		@Html.AntiForgeryToken()
+
+		<div class="form-actions no-color">
+			<input type="submit" value="Delete" class="btn btn-default" /> 
+			@Html.ActionLink("VỀ TRANG QUẢN LÝ MÀU", "Index")
+		</div>
+	}
+</div>

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<WebMULTI.Models.Productimg>
+
+@foreach (var i in Model)
+{
+    @*<div class="">
+            <img class="w-100 h-100" src="~/img/@i.nameimg" alt="Image">
+        </div>*@
+    <div class="mySlides">
+        <img src="~/img/@i.nameimg" style="width:100%">
+    </div>
+}
+
