@@ -1,0 +1,1863 @@
+
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": 1
+}
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": 1
+}
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "7"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "8"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "11"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "<br \/>\n<b>Warning<\/b>:  Undefined variable $foods in <b>D:\\Move_C\\odergogi\\order_menu.php<\/b> on line <b>107<\/b><br \/>\n<br \/>\n<b>Warning<\/b>:  Trying to access array offset on value of type null in <b>D:\\Move_C\\odergogi\\order_menu.php<\/b> on line <b>107<\/b><br \/>\n"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "15"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "15"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: null
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+allow_url_fopen: On
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: null
+Dữ liệu nhận: null
+Dữ liệu nhận: null
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "11"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "16"
+}
+Dữ liệu nhận: {
+    "id_food": "17"
+}
+Dữ liệu nhận: {
+    "id_food": "17"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+Dữ liệu nhận: {
+    "id_food": "16"
+}
+Dữ liệu nhận: {
+    "id_food": "15"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "8"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "18"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "16"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "7"
+}
+Dữ liệu nhận: {
+    "id_food": "7"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "7"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "8"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "17"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "20"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "20"
+}
+Dữ liệu nhận: {
+    "id_food": "19"
+}
+Dữ liệu nhận: {
+    "id_food": "15"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "11"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "11"
+}
+Dữ liệu nhận: {
+    "id_food": "19"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "7"
+}
+Dữ liệu nhận: {
+    "id_food": "7"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "7"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "7"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "15"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "7"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "8"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "8"
+}
+Dữ liệu nhận: {
+    "id_food": "12"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "11"
+}
+Dữ liệu nhận: {
+    "id_food": "18"
+}
+Dữ liệu nhận: {
+    "id_food": "18"
+}
+Dữ liệu nhận: {
+    "id_food": "18"
+}
+Dữ liệu nhận: {
+    "id_food": "18"
+}
+Dữ liệu nhận: {
+    "id_food": "19"
+}
+Dữ liệu nhận: {
+    "id_food": "19"
+}
+Dữ liệu nhận: {
+    "id_food": "11"
+}
+Dữ liệu nhận: {
+    "id_food": "20"
+}
+Dữ liệu nhận: {
+    "id_food": "20"
+}
+Dữ liệu nhận: {
+    "id_food": "20"
+}
+Dữ liệu nhận: {
+    "id_food": "20"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "7"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "3"
+}
+Dữ liệu nhận: {
+    "id_food": "20"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "20"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "19"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "5"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "15"
+}
+Dữ liệu nhận: {
+    "id_food": "10"
+}
+Dữ liệu nhận: {
+    "id_food": "20"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "13"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "7"
+}
+Dữ liệu nhận: {
+    "id_food": "19"
+}
+Dữ liệu nhận: {
+    "id_food": "9"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "19"
+}
+Dữ liệu nhận: {
+    "id_food": "6"
+}
+Dữ liệu nhận: {
+    "id_food": "14"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "4"
+}
+Dữ liệu nhận: {
+    "id_food": "20"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "1"
+}
+Dữ liệu nhận: {
+    "id_food": "2"
+}

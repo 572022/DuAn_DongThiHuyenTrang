@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<style>
+    .tabcontent{
+        display: none;
+    }
+    
+    .tab{
+        display: flex;
+    }
+    .tab button{
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border: none;
+    }
+    .active{
+        color: red;
+        border-bottom: 2px solid red !important;
+    }
+    .provisional{
+        width: 100%;
+        
+    }
+    .list_dish {
+    background: #faf4f4;
+    margin: 0.5rem 1.5rem;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0px 2px 8px #737373;
+}
+    .content_list{
+        flex:1;
+    }
+    /* order */
+    .tip{
+        background-color: antiquewhite;
+        padding: 0.5rem 1rem;
+        margin: 10px 0px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .tip i{
+        color: #3fe116;
+    }
+    .tip button{
+        background-color:#3fe116;
+        border:none;
+        white-space: nowrap;
+        color: #fff;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+    }
+    /*  danh sách order css */
+    .list_order_flex{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0.5rem;
+        padding-bottom: .2rem;
+        border-bottom: 2px solid rgba(246, 238, 238, 0.89);
+    }
+    .list_order_flex >span{
+        margin-left: .4rem;
+    }
+    /* tổng tiền */
+    .sum{
+        background: #141111;
+        color: #fff;
+    }
+    .sum button{
+        border:none;
+        background-color: #efe7e7;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+    }
+    @media (min-width: 992px)  {
+        .provisional{
+        width: 70%;
+        margin: 0px auto;
+    }
+    .list_dish {
+        width: 50%;
+        margin: 1rem auto;     
+    }
+    .list_dish img{ width: 12%;}
+    
+    }
+</style>
+<body>
+    <div class="container w-sm-100 w-lg-40">
+        <div class="tab justify-content-evenly p-2 fixed">
+            <span><i class="fa-solid fa-x"></i></span>
+            <span>Gọi món của bạn</span>
+            <span>Gọi thêm</span>
+        </div>
+        <div class="tab ">
+            <button class="tablinks" onclick="openl(event, 'cart')">Giỏ đồ ăn</button>
+            <button class="tablinks" onclick="openl(event, 'order')">Món đã gọi</button>
+          </div>
+          <!-- giỏ đò ăn -->
+          <div class="content-cart-order text-center ">
+            <div id="cart" class="tabcontent">
+                <div class="empty_dish">
+                     <img src="/img/nullcart.jpg" alt="" width="200" class="mt-3">
+                    <p>Bạn chưa có món nào</p>
+                </div>
+                
+                <!-- giỏ đồ ăn có ds -->
+                <div class="list_dish d-flex">
+                    <!-- danh sách giỏ đồ ăn  -->
+                    <img src="/img/logo_gogi.png" alt="" class="img-fluid rounded-2 me-3" width="60">
+                    <div class="content_list">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-bold">Tên</span>
+                            <span>x</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-outline-dark btn-sm px-2 py-0" onclick="updateQuantity(-1)">-</button>
+                                    <input id="quantity" type="number" class="form-control text-center mx-2 px-2 py-0" 
+                                           value="1" min="1" style="width: 60px;" oninput="validateQuantity()">
+                                    <button class="btn btn-outline-dark btn-sm px-2 py-0" onclick="updateQuantity(1)">+</button>
+                                </div>                  
+                            </span>
+                            <span>100.000đ</span>
+                        </div>
+                     
+                    </div>
+                </div>     
+                <!-- tạm tính của giỏ đồ ăn -->
+                <div class="provisional p-3 fixed-bottom">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Tạm tính</h5>
+                        <span class="text-danger fw-bold">0đ</span>
+                    </div>
+                    <div class="d-flex gap-2 mt-2 ">
+                        <button class="btn btn-outline-dark flex-grow-1">Thanh toán</button>
+                        <button class="btn btn-dark flex-grow-1">Gọi món ngay</button>
+                    </div>
+                 </div>
+            </div>
+        </div>   
+            <!-- món đã order -->
+            <div id="order" class="tabcontent">
+                <h3>Món đã gọi</h3>
+                <div class="tip d-flex gap-3">
+                    <i class="fa-solid fa-gift"></i>
+                    <p>Tiếp ngàn động lực cho nhân viên</p>
+                    <button>Tip ngay</button>
+                </div>
+                <!-- danh sách món đã gọi -->
+                <div class="list_order">
+                    <div class="list_order_flex">
+                        <span class="fw-bold">1x</span>
+                        <span class="fw-bold text-wrap">Gầu bò mỹ sốt mật ong</span>
+                        <span class="text-muted text-nowrap">Đang chế biến</span>
+                        <span>139.000đ</span>
+                    </div>
+                    <div class="list_order_flex">
+                        <span class="fw-bold">1x</span>
+                        <span class="fw-bold text-wrap">Gầu bò mỹ sốt </span>
+                        <span class="text-muted text-nowrap">Đang chế biến</span>
+                        <span>139.000đ</span>
+                    </div>
+                </div>
+                <!-- tổng tiền -->
+                <div class="provisional p-3 fixed-bottom sum">
+                    <div class="d-flex justify-content-between align-items-center ">
+                        <span>Tổng: 450.000đ</span>
+                        <button>Thanh toán ngay</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+    </div>
+ 
+      <script>
+      function openl(evt, id) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+      
+        document.getElementById(id).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+
+      function updateQuantity(change) {
+    let quantityInput = document.getElementById("quantity");
+    let newQuantity = parseInt(quantityInput.value) + change;
+
+    if (newQuantity < 1) return; // Không cho số âm
+
+    quantityInput.value = newQuantity;
+    sendQuantityToServer(newQuantity);
+}
+
+function validateQuantity() {
+    let quantityInput = document.getElementById("quantity");
+    let value = parseInt(quantityInput.value);
+    
+    if (isNaN(value) || value < 1) {
+        quantityInput.value = 1;
+    } else {
+        sendQuantityToServer(value);
+    }
+}
+      </script>
+</body>
+</html>

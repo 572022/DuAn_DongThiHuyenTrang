@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style/trangchu.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="menu-top">
+            <ul class="p-2 pb-0 m-0">
+                <li class="text-nowrap">
+                    <img src="/img/logo_gogi.png" alt="">
+                    <span class="menu_span">Bàn x</span>
+                    <span class="menu_span"><i class="fa-regular fa-bell"></i> Gọi NV</span>
+                </li>
+                <li class="">
+                    <span class="menu_span">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </span>
+                    <span class="menu_span" id="userIcon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <button class="btn btn-primary ">Đăng nhập</button>
+                        <button class="btn btn-primary ">Đăng ký</button>
+                    </div>
+
+                </li>
+            </ul>
+            <div class="menu_bottom d-flex align-items-center">
+                <ul class="menu_bottom_scroll ds_loai_menu mb-2">
+                    <li class="menu_span text-nowrap">bò nhập khẩu</li>
+                    <li class="menu_span text-nowrap">bò nhập khẩu</li>
+                    <li class="menu_span text-nowrap">bò nhập khẩu</li>
+                    <li class="menu_span text-nowrap">bò nhập khẩu</li>
+                    <li class="menu_span text-nowrap">bò nhập khẩu</li>
+                    <li class="menu_span text-nowrap">bò nhập khẩu</li>
+                    <li class="menu_span text-nowrap">bò nhập khẩu</li>
+                    <li class="menu_span text-nowrap">bò nhập khẩu</li>
+                </ul>
+                <div class="search-icon ">
+                    <i class="fa-solid fa-magnifying-glass"onclick="openNav()"></i>                
+                </div>
+            </div>    
+            <div id="search" class="search">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                
+                <div class="container mt-3">
+                    <div class="search-expand">
+                        <input type="text" placeholder="Tìm kiếm...">
+                        <button><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+    <div class="container d-flex show_product mt-3">
+        <div class="row text-center ">          
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 p-1">
+                    <div class=" col_product">
+                        <img src="https://food.com.vn/upload/thit-nuong-gogi-14.jpg" alt="" class="img-fluid rounded-2" >
+                        <div class="product_content text-start pt-1">
+                             <h6>Cb thịt nướng tổng hợp</h6>
+                             <div class="product-flex">
+                                <span class="price">450.000đ</span>
+                                 <i class="fa-solid fa-plus plus"></i>
+                             </div>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 p-1">
+                    <div class=" col_product">
+                        <img src="https://food.com.vn/upload/thit-nuong-gogi-14.jpg" alt="" class="img-fluid rounded-2" >
+                        <div class="product_content text-start pt-1">
+                             <h6>Cb thịt nướng tổng hợp</h6>
+                             <div class="product-flex">
+                                <span class="price">450.000đ</span>
+                                 <i class="fa-solid fa-plus plus"></i>
+                             </div>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 p-1">
+                    <div class=" col_product">
+                        <img src="https://food.com.vn/upload/thit-nuong-gogi-14.jpg" alt="" class="img-fluid rounded-2" >
+                        <div class="product_content text-start pt-1">
+                             <h6>Cb thịt nướng tổng hợp</h6>
+                             <div class="product-flex">
+                                <span class="price">450.000đ</span>
+                                 <i class="fa-solid fa-plus plus"></i>
+                             </div>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 p-1">
+                    <div class=" col_product">
+                        <img src="https://food.com.vn/upload/thit-nuong-gogi-14.jpg" alt="" class="img-fluid rounded-2" >
+                        <div class="product_content text-start pt-1">
+                             <h6>Cb thịt nướng tổng hợp</h6>
+                             <div class="product-flex">
+                                <span class="price">450.000đ</span>
+                                 <i class="fa-solid fa-plus plus"></i>
+                             </div>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+        </div>
+        
+    </div>
+    <script>
+        document.getElementById("userIcon").addEventListener("click", function(event){
+            var menu = document.getElementById("dropdownMenu");
+            menu.style.display= (menu.style.display === "block") ? "none" : "block";
+        });
+        function openNav() {
+        document.getElementById("search").style.width = "100%";
+        }
+
+        function closeNav() {
+        document.getElementById("search").style.width = "0";
+        }
+   </script> 
+</body>
+</html>

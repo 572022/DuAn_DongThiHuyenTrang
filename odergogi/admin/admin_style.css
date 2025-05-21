@@ -1,0 +1,271 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #f2f7fb;
+}
+.container {
+    display: flex;
+    padding: 2em;
+}
+
+.list_table {
+    flex: 11;
+    text-align: center;
+    display: flex;
+}
+
+.table-flex {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+     */
+    width: 26%;
+}
+
+.table {
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    margin: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+.occupied {
+    color: red;
+    font-weight: bold;
+}
+
+.menu-right {
+    background-color: rgb(227, 227, 236);
+    flex: 1;
+    height: 100vh;
+    box-shadow: 2px 4px 4px #b09f9f;
+}
+
+ul {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+    border-bottom: 1px solid rgb(130, 128, 128);
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tab_QR {
+    padding: 10px;
+    margin: 2rem;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 4px 7px #827f7f;
+}
+/* phần tab new */
+.tab {
+    text-align: center;
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #263544;
+    width: 14%;
+    height: 100vh;
+}
+.tab span{
+    font-size: 15px;
+}
+
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: #efe9e9;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(102, 102, 102);
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+
+}
+
+.tab button:hover {
+    background-color: #2f557b;
+}
+
+.tab button.active {
+    background-color:rgb(39, 77, 115);
+}
+
+.tabcontent {
+    float: left;
+    padding: 15px;
+    border: 1px solid #ccc;
+    width: 85%;
+    border-left: none;
+    height: 100vh;
+    display: none;
+}
+.tablinks .fa-solid{
+    padding: 0px 5px;
+}
+
+/* phần modal bx */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* css thông tin nhân viên  */
+.admin-info-container {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family:  sans-serif;
+    line-height:2em;
+    font-family: sans-serif;
+}
+
+.admin-info-container h2 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.admin-info-container p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.admin-info-container h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+h3{
+    text-align: center; color: #263544; font-size: 24px; font-weight: bold; border-bottom: 2px solid #263544; padding-bottom: 5px; margin: 20px 0;
+}
+.admin-info-container input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.admin-info-container .btn-ad {
+    width: 50%;
+margin-top: 10px;
+padding: 10px 20px;
+text-align: center;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+font-size: 16px;
+cursor: pointer;
+text-decoration: none;
+transition: background-color 0.3s ease;
+color: white;
+}
+
+.admin-info-container .btn-update {
+background-color: #007BFF;
+}
+
+.admin-info-container .btn-update:hover {
+background-color: #0056b3;
+}
+
+.admin-info-container .btn-logout {
+background-color: #dc3545;
+}
+
+.admin-info-container .btn-logout:hover {
+background-color: #c82333;
+}
+/* searchForm  */
+#searchForm {
+    display: flex
+;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 1px 0px 5px rgb(0 0 0 / 24%);
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+#searchForm label {
+font-weight: bold;
+margin-right: 5px;
+}
+
+#searchForm input[type="date"],
+#searchForm input[type="text"] {
+padding: 8px 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
+min-width: 180px;
+}
+
+#searchForm button {
+padding: 8px 16px;
+background-color: #007BFF;
+border: none;
+color: white;
+font-weight: bold;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+#searchForm button:hover {
+background-color: #0056b3;
+}
+

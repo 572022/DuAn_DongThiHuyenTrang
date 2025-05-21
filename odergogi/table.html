@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<style>
+    *{
+        padding:0px;
+        margin: 0px;
+    }
+    .container{
+        display: flex;
+        padding: 2em;
+    }
+    .list_table{
+        flex:11;
+        text-align: center;
+
+    }
+    .table-flex{
+        display: flex;
+    }
+    .table{
+        width: 20%;
+        padding: 20px;
+        background-color: #d1d1d185;
+        margin:20px;
+    }
+    .menu-right{
+        background-color: rgb(227, 227, 236);
+        flex:1;
+        height: 100vh;
+        box-shadow: 2px 4px 4px #b09f9f;
+    }
+    ul{
+        padding: 10px;
+        margin: 0; 
+        text-align: center;
+    }
+    ul li{
+            list-style: none;
+            /* background-color: brown;  */
+            border-bottom: 1px solid rgb(130, 128, 128);
+            padding: 5px;
+            margin: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="menu-right">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-bell"></i>
+                </li>
+                <li>
+                    <i class="fa-solid fa-file-invoice"></i> <!-- Hóa đơn -->
+                </li>
+            </ul>        
+        </div>
+        <div class="list_table">
+            <h1>Danh sách bàn</h1>
+            <div class="table-flex">
+                <div class="table">
+                    Mã bàn
+                    <br>Trạng thái
+                </div>
+                <div class="table">
+                    Mã bàn
+                    <br>Trạng thái
+                </div>
+                <div class="table">
+                    Mã bàn
+                    <br>Trạng thái
+                </div>
+                <div class="table">
+                    Mã bàn
+                    <br>Trạng thái
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
